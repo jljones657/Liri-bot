@@ -1,0 +1,20 @@
+{
+  "name": "Liri-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jljones657/Liri-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jljones657/Liri-bot/issues"
+  },
+  "homepage": "https://github.com/jljones657/Liri-bot#readme"
+}
