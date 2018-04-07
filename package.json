@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/jljones657/Liri-bot/issues"
   },
-  "homepage": "https://github.com/jljones657/Liri-bot#readme"
+  "homepage": "https://github.com/jljones657/Liri-bot#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "fs-extra": "^5.0.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.1"
+  }
 }
