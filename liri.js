@@ -6,7 +6,7 @@ var client = new Twitter(keys.twitter);
 var fs = require ('fs-extra');
 
 //capture user input, and inform user of what to type in.
-console.log("Type my-tweets , spotify-this-song to get started!");
+console.log("Type 'my-tweets' to get started!");
 //process[2] choses action, process[3] as search parameter for spotify or movie.
 var userCommand = process.argv[2];
 var secondCommand = process.argv[3];
@@ -21,10 +21,6 @@ function theSwitch(){
 
 		case 'my-tweets':
 		fetchTweets();
-		break;
-
-		case 'spotify-this-song':
-		spotifyMe();
 		break;
 
 		
@@ -59,33 +55,8 @@ function fetchTweets(){
 	});
 };//end fetchTweets;
 
-function spotifyMe(){
-	console.log("Music!");
 
-	//variable for search term, test if defined.
-
-	var searchTrack;
-	if(secondCommand === undefined){
-		searchTrack = "The Sign";
-	}else{
-		searchTrack = secondCommand;
-	}
-	//launch spotify search
-	spotify.search({type:'track', query:searchTrack}, function(err,data){
-	    if(err){
-	        console.log('Error occurred: ' + err);
-	        return;
-	    }else{
-	        //tried searching for release year! Spotify doesn't return this!
-	  		console.log("Artist: " + data.tracks.items[0].artists[0].name);
-	        console.log("Song: " + data.tracks.items[0].name);
-	        console.log("Album: " + data.tracks.items[0].album.name);
-	        console.log("Preview Here: " + data.tracks.items[0].preview_url);
-	    }
-	});
-};//end spotifyMe
 
 
 
 theSwitch();
-
